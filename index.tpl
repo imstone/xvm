@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>H2W组件库</title>
+  <title>ES6</title>
 </head>
 <body>
   <div id="app">

@@ -1,5 +1,4 @@
 node_modules/*
-example/dist/*
 dist/*
 npm-debug.log
 bundle.js
