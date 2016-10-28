@@ -2,7 +2,7 @@ function Xvm (options) {
 	console.log(options)
 };
 let pro = Xvm.prototype;
-//pro.
+//pro. 测试
 new Xvm({
 	data() {
 		return {
