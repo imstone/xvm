@@ -1,3 +1,4 @@
+import {observe} from './observe.js'
 
 function Xvm (options) {
     this._initData(options.data());
@@ -11,6 +12,7 @@ pro._initData = function (data) {
         let key = keys[i];
         this._proxy(key);
     }
+    observe(data, this);
 }
 pro._proxy =  function (key) {
     console.log(key);

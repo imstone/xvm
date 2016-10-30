@@ -3,7 +3,12 @@ import Xvm from './xvm'
 let s  = new Xvm({
 	data() {
 		return {
-			time: 1
+			time: 1,
+			name: 'stone',
+			like: {
+				out: 'running',
+				inner: 'music'
+			}
 		}
 	}
 })
