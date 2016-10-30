@@ -11,11 +11,12 @@ pro._initData = function (data) {
     while (i--) {
         let key = keys[i];
         this._proxy(key);
+
     }
     observe(data, this);
 }
 pro._proxy =  function (key) {
-    console.log(key);
+    debugger
     let self = this;
     Object.defineProperty(self, key, {
         configurable: true,

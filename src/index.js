@@ -5,10 +5,7 @@ let s  = new Xvm({
 		return {
 			time: 1,
 			name: 'stone',
-			like: {
-				out: 'running',
-				inner: 'music'
-			}
+			like: 222
 		}
 	}
 })
