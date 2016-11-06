@@ -9,7 +9,7 @@ let s  = new Xvm({
 	}
 })
 console.log(s.time)
-// s.time=2
+ s.time=2
 console.log(s)
 // import Vue from 'vue'
 // let v = new Vue({

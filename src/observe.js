@@ -1,6 +1,9 @@
 import {def} from './tools.js';
 import Dep from './dep.js';
 export function observe(value, vm){
+	if (!value || typeof value !== 'Object') {
+		return;
+	}
 	let ob = new Observer(value);
 	return ob;
 }
@@ -10,6 +13,7 @@ export function Observer(value) {
 	console.log(value)
 	this.value = value;
 	this.dep = new Dep();
+		debugger
 	def(value, '__ob__', this);
 	this.walk(value);
 }
@@ -34,7 +38,7 @@ export function defineReactive (obj, key, val) {
 	}
 	let getter = property && property.get;
 	let setter = property && property.set;
-	debugger
+
 	Object.defineProperty(obj, key, {
 		enumerable: true,
 		configurable: true,
@@ -42,7 +46,7 @@ export function defineReactive (obj, key, val) {
 			let value = getter ? getter.call(obj) : val;
 			return value
 		},
-		set: function () {
+		set: function (newVal) {
 			let value = getter ? getter.call(obj) : val;
 			if (value == newVal) {
 				return;
@@ -53,7 +57,7 @@ export function defineReactive (obj, key, val) {
 			else {
 				val = newVal;
 			}
-			caildObj = observe(newVal);
+			childObj = observe(newVal);
 			dep.notify();
 		}
 	})
