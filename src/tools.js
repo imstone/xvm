@@ -15,3 +15,17 @@ export function def (obj, key, val, enumerable) {
     configurable: true
   })
 }
+/**
+ * Query an element selector if it's not an element already.
+ *
+ * @param {String|Element} el
+ * @return {Element}
+ */
+
+export function query (el) {
+  if (typeof el === 'string') {
+    var selector = el
+    el = document.querySelector(el);
+  }
+  return el
+}

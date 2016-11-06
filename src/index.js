@@ -1,5 +1,6 @@
 import Xvm from './xvm'
 let s  = new Xvm({
+	el:'#app',
 	data() {
 		return {
 			time: 1,
@@ -13,6 +14,7 @@ console.log(s.time)
 console.log(s)
 // import Vue from 'vue'
 // let v = new Vue({
+// 	el: '#app',
 // 	data(){
 // 		return{
 // 			time:2,

@@ -1,4 +1,4 @@
-import {def} from './tools.js';
+import {def, query} from './tools.js';
 import Dep from './dep.js';
 export function observe(value, vm){
 	if (!value || typeof value !== 'Object') {
