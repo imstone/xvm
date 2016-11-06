@@ -16,7 +16,7 @@ pro._initData = function (data) {
     observe(data, this);
 }
 pro._proxy =  function (key) {
-    debugger
+    
     let self = this;
     Object.defineProperty(self, key, {
         configurable: true,

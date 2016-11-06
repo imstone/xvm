@@ -1,5 +1,4 @@
 import Xvm from './xvm'
-//pro. 测试
 let s  = new Xvm({
 	data() {
 		return {
@@ -10,5 +9,18 @@ let s  = new Xvm({
 	}
 })
 console.log(s.time)
-s.time=2
+// s.time=2
 console.log(s)
+// import Vue from 'vue'
+// let v = new Vue({
+// 	data(){
+// 		return{
+// 			time:2,
+// 			name:'d'
+// 		}
+// 	}
+// })
+// console.log(v.time)
+// v.time=4
+// console.log(v)
+

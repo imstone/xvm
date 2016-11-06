@@ -34,16 +34,44 @@ export function defineReactive (obj, key, val) {
 	}
 	let getter = property && property.get;
 	let setter = property && property.set;
-
-	Object.defineProperty({
+	debugger
+	Object.defineProperty(obj, key, {
 		enumerable: true,
 		configurable: true,
-		get: function () {
-			let value = getter ? getter.call(obj) :val;
+		get: function reactiveGetter() {
+			let value = getter ? getter.call(obj) : val;
+			return value
 		},
 		set: function () {
-
+			let value = getter ? getter.call(obj) : val;
+			if (value == newVal) {
+				return;
+			}
+			if (setter) {
+				setter.call(obj, newVal)
+			}
+			else {
+				val = newVal;
+			}
+			caildObj = observe(newVal);
+			dep.notify();
 		}
 	})
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
