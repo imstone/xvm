@@ -1,4 +1,3 @@
-
 /**
  * Parse a template text string into an array of tokens.
  *
@@ -9,10 +8,14 @@
  *               - {Boolean} [html]
  *               - {Boolean} [oneTime]
  */
-
-export default function (text) {
-
-  var tokens = []
-  console.log(text)
-  return tokens
+const regexEscapeRE = /[-.*+?^${}()|[\]\/\\]/g
+export default function(text) {
+    console.log(vm)
+    var tokens = []
+    text = text.replace(regexEscapeRE, '');
+    tokens.push({
+        value: text.trim()
+    })
+    console.log(text)
+    return tokens
 }

@@ -1,5 +1,5 @@
 import {def, query} from './tools.js';
-import text from './text.js'
+import parseText from './text.js'
 export default function (el, options, partial) {
 	//let nodeLinFn = partial || !options._asComponent
 	compileNode(el, options)// : null;
@@ -9,7 +9,7 @@ export default function (el, options, partial) {
 function compileNode (node, options) {
 	node = node.firstChild;
 	let type = node.nodeType;
-	console.log(node.data)
+	console.log(node.data.trim())
 	console.log(type)
 	if (type === 1) {
 
